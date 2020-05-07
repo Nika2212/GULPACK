@@ -1,0 +1,29 @@
+{
+  "name": "gulpack-plus",
+  "version": "0.0.3",
+  "repository": "https://github.com/Nika2212/GulPack",
+  "description": "Gulpack is free bundler, combined with Gulp 4 + Webpack 4. Also fully supports TypeScript and Sass.",
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "keywords": [],
+  "author": "Nick Barsukov",
+  "license": "ISC",
+  "browserslist": ["defaults", "not IE 11", "not IE_Mob 11", "maintained node versions"],
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "ts-loader": "^7.0.2",
+    "typescript": "^3.8.3",
+    "webpack-stream": "^5.2.1"
+  }
+}
