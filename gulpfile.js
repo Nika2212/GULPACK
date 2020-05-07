@@ -41,14 +41,14 @@ function compileScript() {
 }
 function compileStyle() {
     if (config.mode === "development") {
-        return gulp.src(styleEntryPath + ".{scss, sass, css}", {allowEmpty: true})
+        return gulp.src([styleEntryPath + ".css", styleEntryPath + ".scss", styleEntryPath + ".sass"], {allowEmpty: true})
             .pipe(sass())
             .pipe(autoprefixer({level: 2}))
             .pipe(concat(config.outputStyleName + ".css"))
             .pipe(gulp.dest(config.distPath))
             .pipe(browserSync.stream())
     } else if (config.mode === "production") {
-        return gulp.src(styleEntryPath + ".{scss, sass, css}", {allowEmpty: true})
+        return gulp.src([styleEntryPath + ".css", styleEntryPath + ".scss", styleEntryPath + ".sass"], {allowEmpty: true})
             .pipe(sass())
             .pipe(autoprefixer())
             .pipe(cleanCSS())
@@ -68,7 +68,7 @@ function cleanDistFolder() {
 function watcher() {
     browserSync.init({
         server: {
-            baseDir: config.distPath,
+            baseDir: "./",
             port: config.port,
             open: true
         }
