@@ -10,7 +10,12 @@
   "keywords": [],
   "author": "Nick Barsukov",
   "license": "ISC",
-  "browserslist": ["defaults", "not IE 11", "not IE_Mob 11", "maintained node versions"],
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
@@ -22,6 +27,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "ts-loader": "^7.0.2",
     "typescript": "^3.8.3",
     "webpack-stream": "^5.2.1"

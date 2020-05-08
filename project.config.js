@@ -15,11 +15,11 @@ module.exports = {
     // Vendor Assets Source Path (compiles in alphabetic order if file array isn't specified)
     vendorScriptPath: "./src/third-party/js",
     vendorStylePath: "./src/third-party/css",
-    vendorScriptFileArray: [],
-    vendorStyleFileArray: [],
+    vendorScriptFileArray: ["bootstrap.min.js"],
+    vendorStyleFileArray: ["bootstrap.min.css"],
     // Vendor Assets Output Filename (without extension)
-    vendorScriptName: "lib",
-    vendorStyleName: "lib",
+    vendorScriptName: "vendor",
+    vendorStyleName: "vendor",
     // Build Distribute Path
     distPath: "./dist",
     // Use TypeScript
