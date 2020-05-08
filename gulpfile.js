@@ -45,7 +45,8 @@ function compileScript() {
         .pipe(gulp.dest(config.distPath))
         .pipe(browserSync.stream())
 }
-function compileVendorScript() {
+function compileVendorScript(done) {
+    if (vendorScriptPathList.length === 0) return done();
     return gulp.src(vendorScriptPathList, {allowEmpty: true})
         .pipe(uglify())
         .pipe(concat(config.vendorScriptName + ".js"))
@@ -70,7 +71,8 @@ function compileStyle() {
             .pipe(browserSync.stream())
     }
 }
-function compileVendorStyle() {
+function compileVendorStyle(done) {
+    if (vendorStylePathList.length === 0) return done();
     return gulp.src(vendorStylePathList, {allowEmpty: true})
         .pipe(autoprefixer())
         .pipe(cleanCSS())
